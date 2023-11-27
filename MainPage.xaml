@@ -3,39 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Proyecto2_MZ_MJ.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
-
+    <Grid>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="20">
+            <Label Text="Bienvenido al Hotel Paradiso" FontSize="28" TextColor="Black" HorizontalOptions="CenterAndExpand" />
+            <Label Text="Tu destino de lujo para relajación y comodidad" FontSize="16" TextColor="Gray" HorizontalOptions="CenterAndExpand" />
+            <BoxView BackgroundColor="Gray" HeightRequest="1" Margin="0,10,0,10" />
+            <Label Text="Explora nuestras lujosas habitaciones, disfruta de servicios de primera clase y crea recuerdos inolvidables." FontSize="18" TextColor="Black" HorizontalOptions="CenterAndExpand" />
             <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                Source="empresita.jpg"
                 HeightRequest="200"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"/>
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+            <Button Text="Reservar Ahora" TextColor="White" BackgroundColor="#007bff" FontSize="20" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" Clicked="ReservarButton_Clicked" />
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+        </StackLayout>
 
-        </VerticalStackLayout>
-    </ScrollView>
+    </Grid>
 
 </ContentPage>

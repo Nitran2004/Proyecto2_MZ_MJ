@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto2_MZ_MJ.SecondPage"
+             Title="Compartida">
+    <VerticalStackLayout>
+        <Label 
+            Text="Create"
+            FontSize="30"  
+            VerticalOptions="Center" 
+             />
+
+        <Label 
+            Text="Nombre"
+            FontSize="15"             
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+        <Entry Placeholder="Nombre"
+        VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+
+
+        <Label 
+            Text="Capacidad"
+            FontSize="15"             
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+        <Entry Placeholder="Capacidad"
+        VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+
+        <Label 
+            Text="Fecha"
+            FontSize="15"             
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+        <Entry Placeholder="dd/mm/aaaa"
+        VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+        <Button Text="Haz click aqui" HorizontalOptions="Center" WidthRequest="80" Clicked="OnOpenPageClicked_Foro2"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+        </Grid>
+
+
+    </VerticalStackLayout>
+</ContentPage>

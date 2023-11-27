@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto2_MZ_MJ.MainPage2"
+             Title="HOTEL PARADISE">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Text="Bienvenido a tu Hotel favorito"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center"/>
+            <!--<Label Text="Learn about buildings web apps"
+                   FontSize="10"/>-->
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <VerticalStackLayout Grid.Column="0">
+                    <Label Text="Escoge la habitación por favor"/>
+                </VerticalStackLayout>
+
+
+
+
+            </Grid>
+
+            <Label 
+                Text="Suite"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="22"
+                HorizontalOptions="Center" />
+
+            <Image
+                Source="suite.jpg"
+                HeightRequest="200"
+                HorizontalOptions="Center"/>
+
+            <Button Text="Haz click aqui" HorizontalOptions="Center" WidthRequest="80" Clicked="OnOpenPageClicked"/>
+
+            <Label 
+                Text="Compartida"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="22"
+                HorizontalOptions="Center" />
+
+            <Image
+                Source="compartida.jpg"
+                HeightRequest="200"
+                HorizontalOptions="Center"/>
+
+            <Button Text="Haz click aqui" HorizontalOptions="Center" WidthRequest="80" Clicked="OnOpenPageClicked_2" />
+
+            <Label 
+                Text="Familiar"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="22"
+                HorizontalOptions="Center" />
+
+            <Image
+                Source="familiar.jpg"
+                HeightRequest="200"
+                HorizontalOptions="Center"/>
+
+            <Button Text="Haz click aqui" HorizontalOptions="Center" WidthRequest="80" Clicked="OnOpenPageClicked_3"/>
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
