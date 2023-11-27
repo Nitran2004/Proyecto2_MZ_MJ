@@ -3,52 +3,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Proyecto2_MZ_MJ.ThirdPage"
              Title="Familiar">
-    <VerticalStackLayout>
-        <Label 
-            Text="Create"
-            FontSize="30"  
-            VerticalOptions="Center" 
-             />
+    <ScrollView>
+        <VerticalStackLayout>
 
-        <Label 
-            Text="Nombre"
-            FontSize="15"             
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"/>
-        <Entry Placeholder="Nombre"
-        VerticalOptions="Center" 
-            HorizontalOptions="Center"/>
+            <Label Text="Nombre" FontSize="16" />
+            <Entry x:Name="txtNombre" Placeholder="Ingrese su nombre" />
 
+            <Label Text="Correo" FontSize="16" />
+            <Entry x:Name="txtCorreo" Placeholder="Ingrese su correo electrónico" />
 
-        <Label 
-            Text="Capacidad"
-            FontSize="15"             
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"/>
-        <Entry Placeholder="Capacidad"
-        VerticalOptions="Center" 
-            HorizontalOptions="Center"/>
+            <Label Text="Capacidad" FontSize="16" />
+            <Entry x:Name="txtCapacidad" Placeholder="Ingrese la capacidad" />
 
-        <Label 
-            Text="Fecha"
-            FontSize="15"             
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"/>
-        <Entry Placeholder="dd/mm/aaaa"
-        VerticalOptions="Center" 
-            HorizontalOptions="Center"/>
-        <Button Text="Haz click aqui" HorizontalOptions="Center" WidthRequest="80" Clicked="OnOpenPageClicked_Foro3"/>
+            <Label Text="Precio por noche" FontSize="16" />
+            <Entry x:Name="txtPrecio" Placeholder="Ingrese el precio por noche" />
 
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+            <Label Text="Descripción" FontSize="16" />
+            <Entry x:Name="txtDescripcion" Placeholder="Ingrese la descripción" />
 
+            <Label Text="Disponible" FontSize="16" />
+            <Switch x:Name="switchDisponible" />
 
-        </Grid>
+            <Label Text="Tipo" FontSize="16" />
+            <Picker x:Name="pickerTipo">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Suite</x:String>
+                        <x:String>Suite Jr</x:String>
+                        <x:String>Gran Suite</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
 
+            <Label Text="Vista" FontSize="16" />
+            <Entry x:Name="txtVista" Placeholder="Ingrese la vista" />
 
-    </VerticalStackLayout>
+            <Button Text="Guardar" Clicked="Guardar_Clicked" />
+            <Button Text="Borrar" Clicked="OnBorrarClicked" />
+            <Button Text="Leer" Clicked="OnLeerClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
