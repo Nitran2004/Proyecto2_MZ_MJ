@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Proyecto2_MZ
+namespace Proyecto2_MZ_MJ
 {
     public class Usuario
     {
