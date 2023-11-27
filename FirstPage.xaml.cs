@@ -63,21 +63,37 @@ namespace Proyecto2_MZ_MJ
 
         private async void OnLeerClicked(object sender, EventArgs e)
         {
-            // JSON de ejemplo (ajusta esto según tus necesidades)
-            string jsonEjemplo = "{\"Nombre\":\"EjemploNombre\",\"Correo\":\"ejemplo@correo.com\"}";
-
-            // Deserializa el JSON de ejemplo en un objeto de Usuario
-            var usuario = JsonSerializer.Deserialize<Usuario>(jsonEjemplo);
-
-            if (usuario != null)
+            if (File.Exists(filePath))
             {
-                await DisplayAlert("Datos", $"Nombre: {usuario.Nombre}\nCorreo: {usuario.Correo}", "Aceptar");
+                // Leer todos los datos desde el archivo
+                string[] lines = File.ReadAllLines(filePath);
+
+                if (lines.Length >= 8) // Asegurarse de que hay al menos 8 líneas de datos
+                {
+                    string nombre = lines[0];
+                    string correo = lines[1];
+                    string capacidad = lines[2];
+                    string precio = lines[3];
+                    string descripcion = lines[4];
+                    bool disponible = bool.Parse(lines[5]);
+                    string tipo = lines[6];
+                    string vista = lines[7];
+
+                    // Mostrar una alerta con los valores leídos
+                    string mensaje = $"Nombre: {nombre}\nCorreo: {correo}\nCapacidad: {capacidad}\nPrecio: {precio}\nDescripción: {descripcion}\nDisponible: {disponible}\nTipo: {tipo}\nVista: {vista}";
+                    await DisplayAlert("Datos", mensaje, "Aceptar");
+                }
+                else
+                {
+                    await DisplayAlert("Error", "Los datos en el archivo no son suficientes", "Aceptar");
+                }
             }
             else
             {
                 await DisplayAlert("Error", "No se encontraron datos guardados", "Aceptar");
             }
         }
+
 
 
         private async void OnBorrarClicked(object sender, EventArgs e)
