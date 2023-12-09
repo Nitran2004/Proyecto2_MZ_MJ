@@ -55,7 +55,7 @@ namespace Proyecto2_MZ_MJ
             SaveDataToFile(nombre, correo, capacidad, precio, descripcion, disponible, tipo, vista);
 
             // Mostrar una alerta con los valores guardados
-            string mensaje = $"Nombre: {nombre}\nCorreo: {correo}\nCapacidad: {capacidad}\nPrecio: {precio}\nDescripción: {descripcion}\nDisponible: {disponible}\nTipo: {tipo}\nVista: {vista}";
+            string mensaje = $"Nombre: {nombre}\nCorreo: {correo}\nCapacidad: {capacidad}\nPrecio: {precio}\nNumHabitacion: {descripcion}\nDisponible: {disponible}\nTipo: {tipo}\nVista: {vista}";
             await DisplayAlert("Datos ingresados", mensaje, "Aceptar");
         }
 

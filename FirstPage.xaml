@@ -12,14 +12,14 @@
         <Label Text="Correo" FontSize="16" />
         <Entry x:Name="txtCorreo" Placeholder="Ingrese su correo electrónico" />
 
-        <Label Text="Capacidad" FontSize="16" />
-        <Entry x:Name="txtCapacidad" Placeholder="Ingrese la capacidad" />
+        <Label Text="Numero de acompañantes" FontSize="16" />
+            <Entry x:Name="txtCapacidad" Placeholder="Ingrese el numero de acompañantes" />
 
         <Label Text="Precio por noche" FontSize="16" />
         <Entry x:Name="txtPrecio" Placeholder="Ingrese el precio por noche" />
 
-        <Label Text="Descripción" FontSize="16" />
-        <Entry x:Name="txtDescripcion" Placeholder="Ingrese la descripción" />
+        <Label Text="Metodo de Pago" FontSize="16" />
+            <Entry x:Name="txtDescripcion" Placeholder="Metodo de Pago" />
 
         <Label Text="Disponible" FontSize="16" />
         <Switch x:Name="switchDisponible" />
