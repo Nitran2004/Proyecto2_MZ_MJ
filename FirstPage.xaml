@@ -15,14 +15,21 @@
         <Label Text="Numero de acompañantes" FontSize="16" />
             <Entry x:Name="txtCapacidad" Placeholder="Ingrese el numero de acompañantes" />
 
-        <Label Text="Precio por noche" FontSize="16" />
-        <Entry x:Name="txtPrecio" Placeholder="Ingrese el precio por noche" />
-
-        <Label Text="Metodo de Pago" FontSize="16" />
+            <Label Text="Precio por noche" FontSize="16" />
+            <Picker x:Name="pickerPrecio">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Precio Suite: 100</x:String>
+                        <x:String>Precio Suite Jr: 150</x:String>
+                        <x:String>Precio Gran Suite: 200</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+                
+            <Label Text="Metodo de Pago" FontSize="16" />
             <Entry x:Name="txtDescripcion" Placeholder="Metodo de Pago" />
 
-        <Label Text="Disponible" FontSize="16" />
-        <Switch x:Name="switchDisponible" />
+        
 
         <Label Text="Tipo" FontSize="16" />
         <Picker x:Name="pickerTipo">
