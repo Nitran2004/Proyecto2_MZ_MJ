@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Proyecto2_MZ_MJ.ThirdPage"
-             Title="Familiar">
+             Title="Registro de usuario en Familiar">
     <ScrollView>
         <VerticalStackLayout>
 
@@ -12,25 +12,32 @@
             <Label Text="Correo" FontSize="16" />
             <Entry x:Name="txtCorreo" Placeholder="Ingrese su correo electrónico" />
 
-            <Label Text="Capacidad" FontSize="16" />
-            <Entry x:Name="txtCapacidad" Placeholder="Ingrese la capacidad" />
+            <Label Text="Numero de acompañantes" FontSize="16" />
+            <Entry x:Name="txtCapacidad" Placeholder="Ingrese el numero de acompañantes" />
 
             <Label Text="Precio por noche" FontSize="16" />
-            <Entry x:Name="txtPrecio" Placeholder="Ingrese el precio por noche" />
+            <Picker x:Name="pickerPrecio">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Precio Familiar: 100</x:String>
+                        <x:String>Precio Familiar Jr: 150</x:String>
+                        <x:String>Precio Familiar Suite: 200</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
 
-            <Label Text="Descripción" FontSize="16" />
-            <Entry x:Name="txtDescripcion" Placeholder="Ingrese la descripción" />
+            <Label Text="Metodo de Pago" FontSize="16" />
+            <Entry x:Name="txtDescripcion" Placeholder="Metodo de Pago" />
 
-            <Label Text="Disponible" FontSize="16" />
-            <Switch x:Name="switchDisponible" />
+
 
             <Label Text="Tipo" FontSize="16" />
             <Picker x:Name="pickerTipo">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
-                        <x:String>Suite</x:String>
-                        <x:String>Suite Jr</x:String>
-                        <x:String>Gran Suite</x:String>
+                        <x:String>Familiar</x:String>
+                        <x:String>Familiar Jr</x:String>
+                        <x:String>Gran Familiar</x:String>
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
